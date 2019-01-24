@@ -1,0 +1,7 @@
+<div [ngClass]="{'list-group-item': true, 'list-group-item-success' : isLove(), 'list-group-item-danger' : !isLove()}">
+  <h2 class="inlineBlock">{{title}}</h2>
+  <h2 class="inlineBlock pull-right">{{created_at | date: 'short'}}</h2>
+  <p>{{content}}</p>
+  <button (click)="addLoveIts()" [disabled]="aDejaVoter" class="btn btn-success">Love it !!</button>
+  <button (click)="delLoveIts()" [disabled]="aDejaVoter" class="btn btn-danger">Don't love it !!</button>
+</div>
